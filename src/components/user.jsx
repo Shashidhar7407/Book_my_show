@@ -22,6 +22,11 @@ class User extends React.Component {
     console.log("hey i'm from constructor");
   }
 
+  static getDerivedStateFromProps(prop, state) {
+    console.log("hey i'm from getDerve");
+    return null;
+  }
+
   componentDidMount() {
     // console.log("hey i'm from componentDidMount");
     // to change the planet name
