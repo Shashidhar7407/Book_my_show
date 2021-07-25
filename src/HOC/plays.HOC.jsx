@@ -2,21 +2,21 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 // Layout
-import MovieLayout from "../layouts/Movie.layout";
+import PlayLayout from "../layouts/Movie.layout";
 
-const MovieHOC = ({ component: Component, ...rest }) => {
+const PlayHOC = ({ component: Component, ...rest }) => {
   return (
     <>
       <Route
         {...rest}
         component={(props) => (
-          <MovieLayout>
+          <PlayLayout>
             <Component {...props} />
-          </MovieLayout>
+          </PlayLayout>
         )}
       />
     </>
   );
 };
 
-export default MovieHOC;
+export default PlayHOC;
