@@ -22,8 +22,8 @@ export default function PaymentModal({ isOpen, setIsOpen, price }) {
       theme: { color: "#c4242d" },
     };
 
-    let rzp = new window.Razorpay();
-    rzp.open();
+    let razorPay = new window.Razorpay(options);
+    razorPay.open();
   };
 
   return (
@@ -47,7 +47,7 @@ export default function PaymentModal({ isOpen, setIsOpen, price }) {
               <Dialog.Overlay className="fixed inset-0" />
             </Transition.Child>
 
-
+           
             <span
               className="inline-block h-screen align-middle"
               aria-hidden="true"
