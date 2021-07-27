@@ -8,7 +8,7 @@ import MovieHOC from "./HOC/Movie.HOC";
 // Pages
 import HomePage from "./pages/Home.page";
 import Movie from "./pages/Movie.page";
-// import Play from "./pages/plays.page";
+import Play from "./pages/plays.page";
 import Events from "./pages/Event.page";
 import Activities from "./pages/Activities.page";
 import Sports from "./pages/Sports.page";
@@ -29,7 +29,7 @@ function App() {
     <>
       <DefaultHOC path="/" exact component={HomePage} />
       <MovieHOC path="/movie/:id" exact component={Movie} />
-      {/* <DefaultHOC path="/plays"  exact component={Play}/> */}
+      <DefaultHOC path="/plays"  exact component={Play}/>
       <DefaultHOC path="/events" exact component={Events}/>
       <DefaultHOC path="/sports" exact component={Sports}/>
       <DefaultHOC path="/activities" exact component={Activities}/>
