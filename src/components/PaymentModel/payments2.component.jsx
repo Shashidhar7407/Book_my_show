@@ -8,7 +8,7 @@ export default function PaymentModal({ isOpen, setIsOpen, price }) {
 
   const launchRazorPay = () => {
     let options = {
-      key: "rzp_test_7qKWHYx57G1xE6",
+      key: "rzp_test_wNrAUncW2o29ak",
       amount: price * 100,
       currency: "INR",
       name: "Book My Show Clone",
@@ -22,8 +22,8 @@ export default function PaymentModal({ isOpen, setIsOpen, price }) {
       theme: { color: "#c4242d" },
     };
 
-    let razorPay = new window.Razorpay(options);
-    razorPay.open();
+    let rzp = new window.Razorpay();
+    rzp.open();
   };
 
   return (
@@ -47,7 +47,7 @@ export default function PaymentModal({ isOpen, setIsOpen, price }) {
               <Dialog.Overlay className="fixed inset-0" />
             </Transition.Child>
 
-           
+
             <span
               className="inline-block h-screen align-middle"
               aria-hidden="true"
